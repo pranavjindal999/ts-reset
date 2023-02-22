@@ -5,3 +5,9 @@ doNotExecute(() => {
 
   type tests = [Expect<Equal<typeof result, unknown>>];
 });
+
+doNotExecute(() => {
+  const result = JSON.parse<{}>("{}");
+
+  type tests = [Expect<Equal<typeof result, {}>>];
+});
